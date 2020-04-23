@@ -1,21 +1,5 @@
 `v-drag` - a supler simple, Vue.js draggable component.
 
-![](http://g.recordit.co/bMTaLKJUvp.gif)
-
-Demo: https://branu-ws.github.io/v-drag/
-
-### Installation
-
-npm:
-```bash
-npm install @branu-jp/v-drag
-```
-
-yarn:
-```bash
-yarn add @branu-jp/v-drag --save
-```
-
 ### Use
 
 Node.js env (such a `.vue` components):
@@ -29,7 +13,7 @@ Node.js env (such a `.vue` components):
 </template>
 
 <script>
-import drag from '@branu-jp/v-drag'
+import drag from '@androidfanatic/v-drag'
 
 export default {
   directives: {
@@ -71,6 +55,8 @@ You can constrain the draggable object from leaving the viewport by using the `w
 ```
 
 ### Other
+
+Original source: https://github.com/branu-ws/v-drag
 
 Built by, for and at [BRANU](http://branu.jp/). Our open source projects can be found on our npm page: https://www.npmjs.com/org/branu-jp
 
