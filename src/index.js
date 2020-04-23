@@ -1,22 +1,5 @@
 import Vue from 'vue'
 
-const _data = {
-  draggableElementId: null, // if this is present, only a specific area of the draggable will respond to dragging (eg header bar).
-  down: false,
-  height: 0,
-  width: 0,
-  initialX: 0,
-  initialY: 0,
-  constraintToWindow: false,
-  cursorPreviousX: 0,
-  cursorPreviousY: 0,
-  draggerOffsetLeft: 0,
-  draggerOffsetTop: 0,
-  overlay: null,
-  draggableEl: null,
-  initialZIndex: undefined
-}
-
 export function createOverlay (e, el, _data) {
   const overlay = document.createElement('div')
   overlay.setAttribute('style', `
@@ -134,6 +117,22 @@ export function setDraggerOffset (el, _data) {
 
 export default Vue.directive('drag', {
   inserted: function (el, binding, vnode) {
+    const _data = {
+      draggableElementId: null, // if this is present, only a specific area of the draggable will respond to dragging (eg header bar).
+      down: false,
+      height: 0,
+      width: 0,
+      initialX: 0,
+      initialY: 0,
+      constraintToWindow: false,
+      cursorPreviousX: 0,
+      cursorPreviousY: 0,
+      draggerOffsetLeft: 0,
+      draggerOffsetTop: 0,
+      overlay: null,
+      draggableEl: null,
+      initialZIndex: undefined
+    }
     _data.draggableElementId = binding.arg || null
     _data.constraintToWindow = binding.modifiers['window-only']
     el.addEventListener('mouseup', (e) => mouseup(e, el, _data))
