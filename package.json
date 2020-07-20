@@ -1,7 +1,7 @@
 {
   "name": "@geospoc/v-drag",
   "description": "A Vue.js draggable directive",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "sideEffects": false,
   "main": "dist/v-drag.umd.js",
@@ -9,7 +9,9 @@
   "unpkg": "dist/v-drag.min.js",
   "jsdelivr": "dist/v-drag.min.js",
   "cdn": "dist/v-drag.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com"
@@ -56,7 +58,11 @@
     "shipjs": "0.20.1",
     "vue-template-compiler": "^2.6.11"
   },
-  "keywords": ["drag", "v-drag", "drag component"],
+  "keywords": [
+    "drag",
+    "v-drag",
+    "drag component"
+  ],
   "author": {
     "email": "developers@geospoc.com",
     "name": "GeoSpoc Developers",
