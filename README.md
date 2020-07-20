@@ -1,6 +1,14 @@
-`v-drag` - a supler simple, Vue.js draggable component.
+# `v-drag` 
 
-### Use
+> A super simple, Vue.js draggable component.
+
+## Installation
+
+```bash
+$ npm i @geospoc/v-drag
+```
+
+## Usage
 
 Node.js env (such a `.vue` components):
 
@@ -13,18 +21,15 @@ Node.js env (such a `.vue` components):
 </template>
 
 <script>
-import drag from '@androidfanatic/v-drag'
+import drag from '@geospoc/v-drag';
 
 export default {
   directives: {
-    drag
-  }
-}
+    drag,
+  },
+};
 </script>
 ```
-
-Browser env: __coming soon__.
-
 
 ### Notes
 
@@ -61,3 +66,9 @@ Original source: https://github.com/branu-ws/v-drag
 Built by, for and at [BRANU](http://branu.jp/). Our open source projects can be found on our npm page: https://www.npmjs.com/org/branu-jp
 
 `v-drag` npm link: https://www.npmjs.com/package/@branu-jp/v-drag
+
+## License
+MIT
+
+## Contribution
+
