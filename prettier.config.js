@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@geospoc/prettier-config-standard')
+  ...require('@geospoc/prettier-config-standard'),
 };
