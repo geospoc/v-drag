@@ -1,30 +1,88 @@
 {
-  "name": "@androidfanatic/v-drag",
-  "version": "0.0.10",
+  "name": "@geospoc/v-drag",
   "description": "A Vue.js draggable directive",
-  "main": "lib/index.js",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-jest": "^22.4.1",
-    "babel-preset-env": "^1.6.1",
-    "jest": "^22.4.2",
-    "rimraf": "^2.6.2"
+  "version": "0.1.0",
+  "private": false,
+  "sideEffects": false,
+  "main": "dist/v-drag.umd.js",
+  "module": "dist/v-drag.esm.js",
+  "unpkg": "dist/v-drag.min.js",
+  "jsdelivr": "dist/v-drag.min.js",
+  "cdn": "dist/v-drag.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   },
-  "peerDependencies": {},
-  "scripts": {
-    "start": "babel-node src",
-    "build": "rimraf lib && babel src -d lib --ignore src/__tests__",
-    "test": "jest"
-  },
-  "homepage": "https://github.com/bran-ws/v-drag#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/branu-ws/v-drag"
-  },
-  "keywords": [],
-  "author": "BRANU",
   "license": "MIT",
+  "scripts": {
+    "build": "npm run bundle && npm run bundle:min",
+    "bundle": "rollup -c build/rollup.config.js",
+    "bundle:min": "rollup -c build/rollup.config.min.js",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lintfix": "npm run lint:eslint:fix && npm run lint:prettier:fix",
+    "lint:eslint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:eslint:fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check \"{,!(node_modules|dist)/**/}*.{js,vue}\" --ignore-path .gitignore",
+    "lint:prettier:fix": "prettier --write \"{,!(node_modules|dist)/**/}*.{js,vue}\" --ignore-path .gitignore",
+    "test": "jest",
+    "release:prepare": "shipjs prepare",
+    "release:trigger": "shipjs trigger"
+  },
   "dependencies": {
     "vue": "^2.5.16"
-  }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@geospoc/prettier-config-standard": "^1.0.1",
+    "@rollup/plugin-babel": "^5.1.0",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-preset-vue": "^2.0.2",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^6.2.2",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "rollup": "^2.22.1",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "keywords": [
+    "drag",
+    "v-drag",
+    "drag component"
+  ],
+  "author": {
+    "email": "developers@geospoc.com",
+    "name": "GeoSpoc Developers",
+    "url": "https://geospoc.com"
+  },
+  "contributors": [
+    "BRANU",
+    "androidfanatic",
+    {
+      "name": "Vinayak Kulkarni",
+      "email": "inbox.vinayak@gmail.com",
+      "url": "https://vinayakkulkarni.dev"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:geospoc/v-drag.git"
+  },
+  "bugs": {
+    "url": "https://github.com/geospoc/v-drag/issues"
+  },
+  "homepage": "https://v-drag.netlify.app/"
 }
