@@ -9,9 +9,7 @@
   "unpkg": "dist/v-drag.min.js",
   "jsdelivr": "dist/v-drag.min.js",
   "cdn": "dist/v-drag.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com"
@@ -28,8 +26,7 @@
     "lint:prettier": "prettier --check \"{,!(node_modules|dist)/**/}*.{js,vue}\" --ignore-path .gitignore",
     "lint:prettier:fix": "prettier --write \"{,!(node_modules|dist)/**/}*.{js,vue}\" --ignore-path .gitignore",
     "test": "jest",
-    "release:prepare": "shipjs prepare",
-    "release:trigger": "shipjs trigger"
+    "release": "shipjs prepare"
   },
   "dependencies": {
     "vue": "^2.5.16"
@@ -56,13 +53,10 @@
     "rollup": "^2.22.1",
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-vue": "^5.1.9",
+    "shipjs": "0.20.1",
     "vue-template-compiler": "^2.6.11"
   },
-  "keywords": [
-    "drag",
-    "v-drag",
-    "drag component"
-  ],
+  "keywords": ["drag", "v-drag", "drag component"],
   "author": {
     "email": "developers@geospoc.com",
     "name": "GeoSpoc Developers",
