@@ -1,7 +1,7 @@
 {
   "name": "@geospoc/v-drag",
   "description": "A Vue.js draggable directive",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "sideEffects": false,
   "main": "dist/v-drag.umd.js",

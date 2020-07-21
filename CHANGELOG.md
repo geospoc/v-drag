@@ -1,3 +1,13 @@
+## [0.2.1](https://github.com/geospoc/v-drag/compare/v0.2.0...v0.2.1) (2020-07-21)
+
+
+### Bug Fixes
+
+* update `path` in restoring cache ([f52d259](https://github.com/geospoc/v-drag/commit/f52d259f9eddb0e32f1b349a890382d27f4eec71))
+* update ship.js trigger to trigger on main branch ([e2bed7c](https://github.com/geospoc/v-drag/commit/e2bed7cd0c7ef4ac47a1a2f65de6f27a23df6c1a))
+
+
+
 # [0.2.0](https://github.com/geospoc/v-drag/compare/0.0.6...0.2.0) (2020-07-20)
 
 
