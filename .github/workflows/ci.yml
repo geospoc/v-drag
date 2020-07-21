@@ -18,30 +18,32 @@ jobs:
         node: [14]
 
     steps:
-      - uses: actions/setup-node@v1
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup node env
+        uses: actions/setup-node@v2-beta
         with:
           node-version: ${{ matrix.node }}
+          check-latest: true
           registry-url: https://npm.pkg.github.com/
           scope: '@geospoc'
-
-      - name: checkout
-        uses: actions/checkout@v2
 
       - name: Get npm cache directory
         id: npm-cache
         run: echo "::set-output name=dir::$(npm config get cache)"
 
-      - name: Cache node_modules
-        id: cache
+      - name: Restore npm cache
         uses: actions/cache@v2
         with:
-          path: ${{ steps.npm-cache.outputs.dir }}
+          path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-node-
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm i
+        run: npm i  --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.READ_PACKAGES_PAT }}
 
