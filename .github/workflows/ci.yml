@@ -25,12 +25,11 @@ jobs:
           scope: '@geospoc'
 
       - name: checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
 
       - name: Get npm cache directory
         id: npm-cache
-        run: |
-          echo "::set-output name=dir::$(npm config get cache)"
+        run: echo "::set-output name=dir::$(npm config get cache)"
 
       - name: Cache node_modules
         id: cache
@@ -38,8 +37,7 @@ jobs:
         with:
           path: ${{ steps.npm-cache.outputs.dir }}
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          restore-keys: ${{ runner.os }}-node-
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
