@@ -1,3 +1,17 @@
+## [0.2.2](https://github.com/geospoc/v-drag/compare/v0.2.1...v0.2.2) (2020-07-24)
+
+
+### Bug Fixes
+
+* update default label ([469731c](https://github.com/geospoc/v-drag/commit/469731c27d030ff7935d2af0e458e2cc64a3663b))
+
+
+### Features
+
+* add npmrc to ensure [@geospoc](https://github.com/geospoc) registry is gpr ([350d657](https://github.com/geospoc/v-drag/commit/350d6573e6bd413a702d05fc29c0e824c66b0bf5))
+
+
+
 ## [0.2.1](https://github.com/geospoc/v-drag/compare/v0.2.0...v0.2.1) (2020-07-21)
 
 
