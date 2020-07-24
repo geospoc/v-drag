@@ -12,7 +12,7 @@ updates:
   assignees:
   - vinayakkulkarni
   labels:
-  - dependencies
+  - dependencies 🤖
   commit-message:
     prefix: fix
     prefix-development: chore
