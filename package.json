@@ -39,7 +39,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@geospoc/prettier-config-standard": "^1.0.1",
-    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@vue/compiler-sfc": "3.0.5",
     "babel-eslint": "^10.1.0",
